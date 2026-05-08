@@ -19,13 +19,27 @@
     background: #ffffff;
     padding: 2.5rem;
     border-radius: 2rem;
-    border-left: 8px solid #f8bbd0;
-    box-shadow: 0 10px 30px rgba(176, 125, 141, 0.08);
+    border-left: 8px solid var(--color-main-2);
+    box-shadow: 0 10px 30px rgba(181, 51, 36, 0.08);
     transition: transform 0.3s ease;
     flex: 1;
 }
-.desc{
+
+.desc {
     margin-top: 3rem;
+}
+
+.desc ul {
+    list-style-type: disc;
+    padding: 0;
+    margin: 2rem 0 0 2rem;
+
+}
+
+.desc ul li {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+
 }
 
 .creative-card:hover {
@@ -33,7 +47,7 @@
 }
 
 .creative-card h2 {
-    color: #b07d8d;
+    color: var(--color-main-1);
     margin-top: 0;
     font-size: 1.8rem;
     font-weight: normal;
@@ -41,7 +55,7 @@
 
 .creative-card p {
     line-height: 1.8;
-    color: #5d5d5d;
+    color: var(--color-text-muted);
 }
 
 .icon-text {
@@ -54,8 +68,8 @@
 .icon-circle {
     width: 45px;
     height: 45px;
-    background: #fce4ec;
-    color: #b07d8d;
+    background: var(--color-side);
+    color: var(--color-main-1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -66,17 +80,17 @@
 }
 
 .contact-info {
-    border-left: 8px solid #f8bbd0;
-    color: #5d5d5d;
+    border-left: 8px solid var(--color-main-2);
+    color: var(--color-text-muted);
     background: #ffffff;
     padding: 3rem;
     border-radius: 2rem;
-    box-shadow: 0 10px 30px rgba(176, 125, 141, 0.08);
+    box-shadow: 0 10px 30px rgba(181, 51, 36, 0.08);
     transition: transform 0.3s ease;
 }
 
 
-.contact-info:hover{
+.contact-info:hover {
     transform: translateX(10px);
 }
 
@@ -85,8 +99,8 @@
 }
 
 .info-section h3 {
-    color: #b07d8d;
-    border-bottom: 2px solid #fce4ec;
+    color: var(--color-main-1);
+    border-bottom: 2px solid var(--color-side);
     padding-bottom: 0.8rem;
     font-weight: normal;
     font-size: 1.6rem;
@@ -103,7 +117,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0.8rem 0;
-    border-bottom: 1px dashed #fce4ec;
+    border-bottom: 1px dashed var(--color-side);
     transition: all 0.3s ease;
 }
 
@@ -113,7 +127,7 @@
 
 .opening-hours li:hover {
     padding-left: 0.5rem;
-    color: #f06292;
+    color: var(--color-main-1);
 }
 
 .opening-hours span:first-child {
@@ -124,41 +138,42 @@
     display: none;
 }
 
-.map-placeholder {
+.map {
     width: 100%;
     height: 300px;
-    background: #fffafb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 1.5rem;
     margin-top: 2rem;
-    color: #b07d8d;
-    border: 2px dashed #fce4ec;
 }
-        @media (max-width: 768px) {
-            .contact-container {
-                grid-template-columns: 1fr;
-                margin: 2rem 1rem;
-                gap: 2rem;
-                padding: 1rem;
-            }
-            .contact-info {
-                padding: 1.5rem;
-            }
-            .full-day {
-                display: none;
-            }
-            .short-day {
-                display: inline;
-            }
-            .opening-hours li {
-                font-size: 0.9rem;
-            }
-            .map-placeholder {
-                height: 200px;
-            }
-            .creative-card {
-                padding: 1.5rem;
-            }
-        }
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        margin: 2rem 1rem;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .contact-info {
+        padding: 1.5rem;
+    }
+
+    .full-day {
+        display: none;
+    }
+
+    .short-day {
+        display: inline;
+    }
+
+    .opening-hours li {
+        font-size: 0.9rem;
+    }
+
+    .map-placeholder {
+        height: 200px;
+    }
+
+    .creative-card {
+        padding: 1.5rem;
+    }
+}

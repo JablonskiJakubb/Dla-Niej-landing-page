@@ -3,16 +3,16 @@
     max-width: 1000px;
     margin: 4rem auto;
     padding: 3rem;
-    background: #ffffff;
+    background: var(--color-surface);
     border-radius: 2rem;
-    box-shadow: 0 15px 50px rgba(176, 125, 141, 0.08);
+    box-shadow: 0 15px 50px rgba(181, 51, 36, 0.08);
     overflow: hidden;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .profile-container:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 60px rgba(176, 125, 141, 0.12);
+    box-shadow: 0 20px 60px rgba(181, 51, 36, 0.12);
 }
 
 .profile-image {
@@ -26,17 +26,17 @@
     width: 100%;
     height: auto;
     border-radius: 2rem;
-    box-shadow: 0 8px 25px rgba(176, 125, 141, 0.1);
+    box-shadow: 0 8px 25px rgba(181, 51, 36, 0.10);
     object-fit: cover;
     display: block;
 }
 
 .profile-info {
-    color: #5d5d5d;
+    color: var(--color-text-muted);
 }
 
 .profile-info h1 {
-    color: #b07d8d;
+    color: var(--color-main-1);
     margin-top: 2rem;
     font-size: 2.8rem;
     font-weight: normal;
@@ -44,7 +44,7 @@
 }
 
 .profile-info h2 {
-    color: #b07d8d;
+    color: var(--color-main-1);
     font-size: 1.8rem;
     margin-top: 2rem;
     font-weight: normal;
@@ -73,13 +73,13 @@
     content: "➤";
     position: absolute;
     left: 0;
-    color: #f8bbd0;
+    color: var(--color-main-2);
 }
 
 .contact-details {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 2px solid #fce4ec;
+    border-top: 2px solid var(--color-side);
     clear: both;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .contact-details strong {
-    color: #b07d8d;
+    color: var(--color-main-1);
 }
 
 .hours-list {
@@ -111,7 +111,7 @@
     max-width: 350px;
     margin-bottom: 0.5rem;
     padding: 0.4rem 0;
-    border-bottom: 1px dashed #fce4ec;
+    border-bottom: 1px dashed var(--color-side);
 }
 
 .hours-list li:last-child {
