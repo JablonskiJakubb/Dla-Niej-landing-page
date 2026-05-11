@@ -24,3 +24,4 @@ https://dla-niej-alt.netlify.app/
 
 ## Disclaimer
 This project was created for a client. The code is shared for demonstration purposes only.
+The product is unfinished still
