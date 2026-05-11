@@ -56,65 +56,80 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
-    min-height: 4rem;
-    background-color: var(--color-side);
+    padding: 0.5rem 5%;
+    background-color: var(--color-surface);
     color: var(--color-main-1);
-
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 header img {
-    width: 6rem;
-    height: 6rem;
-    background-color: var(--color-bg);
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: 1rem;
-    box-shadow: 0 4px 15px rgba(181, 51, 36, 0.06);
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.image-placeholder {
-    height: 8rem;
-    width: 20rem;
-    background-color: var(--color-neutral-1);
-    border-radius: 1rem;
-    border: 2px solid var(--color-main-1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-}
-
-
 header nav {
-    display: inline-block;
-    margin-left: 5vw;
+    display: flex;
+    gap: 0.5rem;
 }
 
 header button {
-    padding: 1rem 2.2rem;
+    padding: 0.7rem 1.8rem;
     cursor: pointer;
-    margin-left: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
-    color: var(--color-main-1);
-    background-color: var(--color-surface);
-    border: var(--color-main-2) 2px solid;
+    color: var(--color-text);
+    background-color: transparent;
+    border: none;
     border-radius: 2rem;
-    box-shadow: 0 4px 15px rgba(181, 51, 36, 0.06);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.3s ease;
+    font-family: var(--font-claims);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 header button:hover {
-    transform: translateY(-3px);
-    background-color: var(--color-main-2);
     color: var(--color-main-1);
-    border: var(--color-main-2) 2px solid;
-    box-shadow: 0 8px 25px rgba(229, 166, 88, 0.35);
+    background-color: rgba(181, 51, 36, 0.05);
 }
 
-/* Entry Animation */
+header a.active button {
+    color: var(--color-main-1);
+    background-color: rgba(181, 51, 36, 0.08);
+    font-weight: 600;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 2rem;
+    height: 2px;
+    background: var(--color-main-1);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+
+/* Entry Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -127,6 +142,27 @@ header button:hover {
     }
 }
 
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.info-card {
+    animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.info-card:nth-child(1) { animation-delay: 0.1s; }
+.info-card:nth-child(2) { animation-delay: 0.2s; }
+.info-card:nth-child(3) { animation-delay: 0.3s; }
+.info-card:nth-child(4) { animation-delay: 0.4s; }
+.info-card:nth-child(5) { animation-delay: 0.5s; }
+
 main {
     color: var(--color-text-muted);
     animation: fadeIn 0.8s ease-out;
@@ -134,9 +170,9 @@ main {
 
 .content {
     text-align: center;
-    padding: 4rem 2rem;
+    padding: clamp(2rem, 10vh, 6rem) 2rem;
     min-height: 80vh;
-    font-size: 1.4rem;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
     line-height: 1.8;
 }
 
@@ -164,16 +200,16 @@ main {
 }
 
 #eyecatcher h1 {
-    font-size: 8.5rem;
+    font-size: clamp(3rem, 12vw, 8.5rem);
     margin-top: 1.5rem;
     color: var(--color-main-1);
     font-weight: normal;
 }
 
 #eyecatcher p {
-    font-size: 1.6rem;
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
     margin-bottom: 0rem;
-    color: var(--color-texts);
+    color: var(--color-text);
     font-weight: normal;
 }
 
@@ -191,10 +227,10 @@ main {
 
 #about p {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     border: none;
     height: auto;
-    padding: 2rem;
+    padding: clamp(1.5rem, 5vw, 3rem);
     background-color: var(--color-bg);
     border-radius: 2rem;
     box-shadow: 0 4px 15px rgba(181, 51, 36, 0.06);
@@ -203,51 +239,242 @@ main {
 /* <-------------------- footer --------------------> */
 footer {
     text-align: center;
-    padding: 2rem;
-    background-color: var(--color-side);
-    color: var(--color-main-1);
-    box-shadow: 0 -2px 10px rgba(181, 51, 36, 0.08);
+    padding: 4rem 2rem;
+    background-color: var(--color-bg);
+    color: var(--color-text-muted);
+    border-top: 1px solid rgba(181, 51, 36, 0.1);
+    font-size: 1rem;
 }
 
-/* <-------------------- media queries --------------------> */
-@media (max-width: 768px) {
+/* <-------------------- Common Layout Components --------------------> */
+
+.page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem 6rem 2rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-top: clamp(2rem, 8vw, 5rem);
+    margin-bottom: 1rem;
+    color: var(--color-main-1);
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    max-width: 700px;
+    margin: 0 auto clamp(2rem, 6vw, 4rem) auto;
+    font-family: var(--font-body);
+}
+
+.column-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+/* For explicit 4-column layout like Zabiegi */
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.info-card {
+    background: var(--color-surface);
+    padding: 2.5rem;
+    border-radius: 2.5rem;
+    box-shadow: 0 10px 30px rgba(181, 51, 36, 0.03);
+    border: 1px solid rgba(181, 51, 36, 0.05);
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.info-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-main-1), var(--color-main-2));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(181, 51, 36, 0.08);
+    border-color: rgba(181, 51, 36, 0.1);
+}
+
+.info-card:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.info-card h2, .info-card h3 {
+    color: var(--color-main-1);
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+}
+
+.info-card h2::after, .info-card h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--color-main-2);
+    margin-top: 0.5rem;
+    border-radius: 2px;
+}
+
+.card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-list li {
+    padding: 0.8rem 0;
+    padding-left: 1.8rem;
+    position: relative;
+    color: var(--color-text);
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+.card-list li:last-child {
+    border-bottom: none;
+}
+
+.card-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-main-2);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.card-list li:hover {
+    padding-left: 2.2rem;
+    color: var(--color-main-1);
+}
+
+.card-list li:hover::before {
+    transform: translateX(3px);
+}
+
+/* Featured Card (Wide) */
+.featured-card {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #ffffff 0%, #fffcf9 100%);
+    border: 2px solid rgba(229, 166, 88, 0.2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 4rem;
+}
+
+@media (max-width: 968px) {
     header {
-        flex-direction: column;
-        padding: 1rem;
-        height: auto;
+        padding: 0.5rem 5%;
     }
 
-    .image-placeholder {
-        width: 15rem;
-        height: 6rem;
+    .menu-toggle {
+        display: flex;
     }
 
     header nav {
-        margin-left: 0;
-        margin-top: 1rem;
-        display: flex;
-        flex-wrap: wrap;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--color-surface);
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        z-index: 1000;
+        gap: 2rem;
     }
 
-    header button {
-        padding: 0.8rem 1.5rem;
-        font-size: 1.2rem;
-        margin: 0.3rem;
+    header nav.active {
+        transform: translateX(0);
     }
 
-    .content {
-        height: auto;
-        min-height: 50vh;
-        font-size: 1.4rem;
+    header nav a {
+        width: 80%;
+        text-align: center;
     }
 
-    #eyecatcher h1 {
-        font-size: 3rem;
+    header nav a button {
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 1.5rem;
     }
 
-    #about p {
-        height: auto;
-        min-height: 200px;
+    .menu-toggle.open span:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    .featured-card {
+        grid-template-columns: 1fr;
+        padding: clamp(1.5rem, 5vw, 3rem);
+        gap: 2rem;
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* <-------------------- media queries --------------------> */
+@media (max-width: 640px) {
+    header {
+        padding: 0.5rem 5%;
+    }
+
+    .grid-4, .column-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .page-container {
+        padding: 0 1.5rem 4rem 1.5rem;
+    }
+
+    .info-card {
+        padding: 1.8rem;
+    }
+
+    footer {
+        padding: 3rem 1.5rem;
     }
 }

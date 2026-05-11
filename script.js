@@ -1,8 +1,19 @@
-let index = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
 
-function moveSlide(step) {
-    const slides = document.querySelectorAll('.carousel-item');
-    const inner = document.querySelector('.carousel-inner');
-    index = (index + step + slides.length) % slides.length;
-    inner.style.transform = `translateX(${-index * 100}%)`;
-}
+    if (mobileMenu && navMenu) {
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+});

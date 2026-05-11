@@ -118,14 +118,51 @@
     border-bottom: none;
 }
 
-@media (max-width: 768px) {
-    .contact-grid {
+/* Responsive Grid Classes for Doctor Profiles */
+.doctor-details-grid {
+    grid-template-columns: 1fr 2fr;
+}
+
+.doctor-contact-card {
+    grid-template-columns: 1fr 1fr;
+}
+
+.doctor-image-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background-color: var(--color-neutral-1);
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid rgba(181, 51, 36, 0.05);
+}
+
+.appointment-button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    background: var(--color-main-1);
+    color: white;
+    font-family: var(--font-claims);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.appointment-button:hover {
+    background: var(--color-main-2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(181, 51, 36, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .doctor-details-grid, .doctor-contact-card {
         grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .hours-list li {
-        max-width: 100%;
     }
 }
 
@@ -149,34 +186,16 @@
     }
     
     .profile-info h1 {
-        font-size: 2.2rem;
+        font-size: clamp(1.8rem, 5vw, 2.2rem);
         text-align: center;
     }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hours-list li {
+        max-width: 100%;
+    }
 }
-        @media (max-width: 768px) {
-            .profile-container {
-                flex-direction: column;
-                align-items: center;
-                margin: 1rem;
-                padding: 1rem;
-                gap: 1.5rem;
-            }
-            .profile-image {
-                flex: 0 0 auto;
-                width: 100%;
-                text-align: center;
-            }
-            .profile-image img {
-                height: auto;
-                max-height: 400px;
-                width: 100%;
-                max-width: 300px;
-            }
-            .profile-info h1 {
-                font-size: 1.8rem;
-                text-align: center;
-            }
-            .profile-info h2 {
-                font-size: 1.3rem;
-            }
-        }

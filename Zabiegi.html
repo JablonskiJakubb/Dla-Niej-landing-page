@@ -4,98 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zabiegi i Usługi - Gabinet Ginekologiczny</title>
-    <link rel="stylesheet" href="zabiegi.css">
+    <title>Zabiegi Ginekologiczne i Estetyczne | Poznań - Dla Niej</title>
+    <meta name="description" content="Zapoznaj się z szeroką ofertą zabiegów ginekologicznych, położniczych oraz nowoczesnej ginekologii estetycznej i laseroterapii w gabinecie Dla Niej w Poznaniu.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="zabiegi.css">
 </head>
 
 <body>
     <header>
         <img src="materialy/DlaNiej- nowe kolory.png" alt="Logo" class="logo" width="100" height="100">
-        <nav>
+
+        <button class="menu-toggle" id="mobile-menu" aria-label="Otwórz menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="nav-menu">
             <a href="index.html"><button>Home</button></a>
             <a href="lekarze.html"><button>Lekarze</button></a>
-            <a href="Zabiegi.html"><button>Zabiegi</button></a>
+            <a class="active" href="Zabiegi.html"><button>Zabiegi</button></a>
             <a href="kontakt.html"><button>Kontakt</button></a>
         </nav>
     </header>
+    <script src="script.js"></script>
 
     <main>
-        <div class="content">
-            <h1>Nasze Zabiegi i Usługi</h1>
+        <div class="page-container">
+            <h1 class="section-title">Nasze Zabiegi i Usługi</h1>
+            <p class="section-subtitle">Zapewniamy kompleksową opiekę medyczną opartą na nowoczesnych standardach i indywidualnym podejściu do każdej pacjentki.</p>
 
-            <div class="services-list">
-                <div class="service-item">
-                    <h3>1. Profilaktyka, konsultacje ginekologiczno-położnicze</h3>
-                    <p>Regularne badania diagnostyczne to podstawa zdrowia każdej kobiety. 
-                    Wykonujemy m.in. cytologię, USG ginekologiczne i piersi, testy na HPV, badania 
-                    hormonalne oraz diagnostykę infekcji intymnych. Zapraszamy wszystkie kobiety 
-                    na coroczną wizytę ginekologiczną, dzięki której potwierdzamy dobrostan lub 
-                    możemy stwierdzić na wczesnym etapie schorzenia dotyczące układu moczo-płciowego, 
-                    co daje wysokie prawdopodobieństwo całkowitego wyleczenia. 
-                    Pomagamy również w doborze odpowiedniej metody antykoncepcji i planowania 
-                    świadomego macierzyństwa.</p>
+            <div class="column-grid grid-4">
+                <!-- Ginekologia -->
+                <div class="info-card">
+                    <h3>Ginekologia</h3>
+                    <ul class="card-list">
+                        <li>konsultacje ginekologiczne</li>
+                        <li>profilaktyka i diagnostyka chorób kobiecych</li>
+                        <li>cytologia klasyczna i płynna (LBC)</li>
+                        <li>kolposkopia</li>
+                        <li>diagnostyka i leczenie infekcji intymnych</li>
+                        <li>leczenie zaburzeń hormonalnych</li>
+                        <li>diagnostyka oraz leczenie PCOS i endometriozy</li>
+                        <li>dobór antykoncepcji</li>
+                        <li>wkładki domaciczne (zakładanie i usuwanie)</li>
+                        <li>diagnostyka menopauzy</li>
+                        <li>diagnostyka niepłodności</li>
+                    </ul>
                 </div>
 
-                <div class="service-item">
-                    <h3>2. Położnictwo i ciąża</h3>
-                    <p>Zapraszamy wszystkie ciężarne; niezależnie od tego czy to dopiero początki 
-                    ciąży, czy oczekiwanie kolejnego dziecka. Nasz zespół przeprowadzi Was przez 
-                    tę niezwykłą drogę bezpiecznie, profesjonalnie i odpowie na wszystkie 
-                    nurtujące pytania.</p>
+                <!-- Położnictwo -->
+                <div class="info-card">
+                    <h3>Położnictwo</h3>
+                    <ul class="card-list">
+                        <li>prowadzenie ciąży fizjologicznej</li>
+                        <li>prowadzenie ciąży wysokiego ryzyka</li>
+                        <li>konsultacje przedkoncepcyjne</li>
+                        <li>badania USG ciąży</li>
+                        <li>KTG (kardiotokografia)</li>
+                        <li>opieka poporodowa</li>
+                    </ul>
                 </div>
 
-                <div class="service-item">
-                    <h3>3. Zaburzenia endokrynologiczne (hormonalne)</h3>
-                    <p>Jesteśmy profesjonalistami w leczeniu nieregularnych miesiączek, zespołu 
-                    policystycznych jajników (PCOS) i endometriozy. Nie usłyszysz u nas „taka Pani 
-                    uroda” – indywidualnie podchodzimy do problemu każdej pacjentki, pomagamy 
-                    w doborze odpowiedniego leczenia, dobrania terapii hormonalnej lub 
-                    antykoncepcji.</p>
+                <!-- Diagnostyka USG -->
+                <div class="info-card">
+                    <h3>Diagnostyka USG</h3>
+                    <ul class="card-list">
+                        <li>USG ginekologiczne</li>
+                        <li>USG położnicze</li>
+                        <li>USG I, II i III trymestru</li>
+                        <li>monitoring owulacji</li>
+                        <li>USG piersi</li>
+                    </ul>
                 </div>
 
-                <div class="service-item extended">
-                    <h3>4. Ginekologia estetyczna</h3>
-                    <p>Oferujemy zabiegi, poprzedzone indywidualną konsultacją, uwzględniającą stan 
-                    zdrowia i wyniki badań pacjentek, które pozwalają niwelować dolegliwości 
-                    chorobowe, odzyskać estetyczny wygląd okolic intymnych i odbudować 
-                    pewność siebie oraz dobre samopoczucie.</p>
-                    
-                    <div class="sub-service">
-                        <h4>Rodzaje zabiegów:</h4>
-                        <ul>
-                            <li><strong>Inwazyjne:</strong> z zakresu chirurgii ginekologicznej i labioplastyki (plastyki warg sromowych), dążące do poprawy defektów kobiecych narządów płciowych.</li>
-                            <li><strong>Nieinwazyjne:</strong> z wykorzystaniem lasera, kwasu hialuronowego i osocza bogato płytkowego, które są skuteczne w poprawie witalności, jędrności, atrofii, suchości pochwy, jednocześnie będącymi bezpiecznymi w okresie laktacji i menopauzy.</li>
-                        </ul>
+                <!-- Zabiegi ambulatoryjne -->
+                <div class="info-card">
+                    <h3>Zabiegi ambulatoryjne</h3>
+                    <ul class="card-list">
+                        <li>biopsja endometrium</li>
+                        <li>biopsje zmian sromu i szyjki macicy</li>
+                        <li>leczenie zmian szyjki macicy</li>
+                        <li>leczenie kłykcin kończystych</li>
+                        <li>leczenie torbieli gruczołu Bartholina</li>
+                        <li>usuwanie zmian okolic intymnych</li>
+                        <li>zakładanie pessarów</li>
+                    </ul>
+                </div>
+
+                <!-- Ginekologia Estetyczna - Featured Section -->
+                <div class="info-card featured-card">
+                    <div class="featured-content">
+                        <h3>Ginekologia Estetyczna i Laseroterapia</h3>
+                        <p>Nowoczesne zabiegi regeneracyjne wspomagające leczenie dolegliwości intymnych oraz znacząco poprawiające komfort i jakość życia kobiet.</p>
+                        
+                        <div class="sub-category">
+                            <h4>Wskazania do zabiegów</h4>
+                            <ul class="card-list">
+                                <li>wysiłkowe nietrzymanie moczu</li>
+                                <li>suchość pochwy i dyskomfort intymny</li>
+                                <li>zmiany związane z menopauzą</li>
+                                <li>blizny poporodowe</li>
+                                <li>utrata jędrności tkanek</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="sub-service">
-                        <h4>Problemy intymne, które pomożemy Ci rozwiązać w „Dla Niej”:</h4>
-                        <ul class="bullet-list">
-                            <li>Nietrzymanie moczu</li>
-                            <li>Bolesna lub zniekształcona blizna po okołoporodowym nacięciu krocza</li>
-                            <li>Zniekształcona blizna po cięciu cesarskim lub „daszek” skórny ponad nią</li>
-                            <li>Osłabienie lub brak orgazmów</li>
-                            <li>Przerost warg sromowych mniejszych</li>
-                            <li>Wiotkość lub powiększenie warg sromowych większych</li>
-                            <li>Przerost fałdów około-odbytniczych</li>
-                            <li class="featured-item">
-                                <strong>O-shot</strong>
-                                Rewitalizacja okolic intymnych (pochwy i przedsionka pochwy) odpowiadających za reakcje seksualne poprzez miejscowe podanie osocza bogato-płytkowego w znieczulone okolice łechtaczki i górnej części pochwy.
-                            </li>
-                            <li class="featured-item">
-                                <strong>G-shot</strong>
-                                Ostrzyknięcie punktu G bio-wypełniaczem – procedura ma na celu uwypuklenie strefy erogennej, zwiększenie wrażliwości i poprawę jakości życia seksualnego.
-                            </li>
-                        </ul>
+                    <div class="featured-lists sub-category">
+                        <h4>Zakres zabiegów</h4>
+                        <div class="featured-grid">
+                            <ul class="card-list">
+                                <li>laseroterapia ginekologiczna</li>
+                                <li>leczenie nietrzymania moczu</li>
+                                <li>rewitalizacja okolic intymnych</li>
+                                <li>obkurczanie i ujędrnianie pochwy</li>
+                                <li>radiofrekwencja (RF)</li>
+                                <li>labioplastyka</li>
+                            </ul>
+                            <ul class="card-list">
+                                <li>kwas hialuronowy</li>
+                                <li>osocze bogatopłytkowe (PRP)</li>
+                                <li>mezoterapia okolic intymnych</li>
+                                <li>korekta blizn</li>
+                                <li>terapie regeneracyjne</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-
-                <div class="service-item">
-                    <h3>5. Menopauza</h3>
-                    <p>Pomagamy łagodnie przejść przez trudny czas zmian hormonalnych w okresie 
-                    menopauzalnym – oferujemy konsultacje i indywidualne leczenie objawów takich 
-                    jak: uderzenia gorąca, wahania nastroju, suchość pochwy czy zaburzenia snu.</p>
                 </div>
             </div>
         </div>

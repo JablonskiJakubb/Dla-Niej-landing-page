@@ -13,67 +13,76 @@
     <header>
         <img src="materialy/DlaNiej- nowe kolory.png" alt="Logo" class="logo" width="100" height="100">
 
-        <nav>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Otwórz menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="nav-menu">
             <a href="index.html"><button>Home</button></a>
             <a href="lekarze.html"><button>Lekarze</button></a>
             <a href="Zabiegi.html"><button>Zabiegi</button></a>
             <a href="kontakt.html"><button>Kontakt</button></a>
         </nav>
     </header>
+    <script src="script.js"></script>
 
     <main>
-        <section class="profile-container">
-            <div class="profile-image">
-                <p class="image-placeholder">Zdjęcie lekarza, który został wybrany</p>
-            </div>
+        <div class="page-container">
+            <h1 class="section-title">Dr n. Med. Aleksandra Szczęśniak-Chmielecka</h1>
+            <p class="section-subtitle">Specjalistka ginekologii i położnictwa z ponad 25-letnim doświadczeniem.</p>
 
-            <div class="profile-info">
-                <h1>Dr n. Med. Aleksandra Szczęśniak-Chmielecka</h1>
-                <p class="specialization-title">Ginekolog-położnik</p>
+            <div class="column-grid doctor-details-grid">
+                <div class="info-card">
+                    <div class="doctor-image-placeholder">
+                        <img src="materialy/DlaNiej- nowe kolory.png" alt="Aleksandra Szczęśniak-Chmielecka" style="opacity: 0.2; width: 60%;">
+                    </div>
+                    <h3>O lekarzu</h3>
+                    <p>Członkini Polskiego Towarzystwa Ginekologicznego. Odbywała staż w Ropcke-Zweers Ziekenhuis w Holandii oraz pracowała w polskiej przychodni w Dublinie.</p>
+                </div>
 
-                <p>Specjalistka ginekologii i położnictwa, z ponad 25-letnim doświadczeniem. Członkini Polskiego
-                    Towarzystwa Ginekologicznego, która w ramach poszerzania swojej wiedzy brała wielokrotnie udział w
-                    licznych międzynarodowych konferencjach ginekologicznych, a także odbywała staż w Ropcke-Zweers
-                    Ziekenhuis w Hardenberg (Holandia).</p>
+                <div class="info-card">
+                    <h3>Doświadczenie kliniczne</h3>
+                    <p>Wieloletnia członkini kadry medycznej Wojewódzkiego Szpitala w Poznaniu oraz Ginekologiczno-Położniczego Szpitala Klinicznego UM w Poznaniu. Uczestniczka licznych międzynarodowych konferencji.</p>
+                    
+                    <h3 style="margin-top: 2rem;">Zakres usług</h3>
+                    <ul class="card-list">
+                        <li>Konsultacje ginekologiczne i profilaktyka</li>
+                        <li>Prowadzenie ciąży fizjologicznej</li>
+                        <li>Diagnostyka ultrasonograficzna (USG)</li>
+                        <li>Leczenie zaburzeń hormonalnych</li>
+                        <li>Ginekologia operacyjna i ambulatoryjna</li>
+                    </ul>
+                </div>
 
-                <h2>Zakres usług</h2>
-
-                <ul class="specializations">
-                    <li>Konsultacje ginekologiczne</li>
-                    <li>Prowadzenie ciąży</li>
-                    <li>Diagnostyka USG</li>
-                    <li>Profilaktyka chorób kobiecych</li>
-                    <li>Ginekologia operacyjna</li>
-                </ul>
-
-                <p>Wieloletnia Członkini kadry medycznej Wojewódzkiego Szpitala w Poznaniu, Ginekologiczno-Położniczego
-                    Szpitala Klinicznego Uniwersytetu Medycznego im. Karola Marcinkowskiego w Poznaniu oraz lekarz w
-                    polskiej przychodni w Dublinie (Irlandia).
-                </p>
-
-                <div class="contact-details">
-                    <h2>Kontakt i godziny przyjęć</h2>
-
-                    <div class="contact-grid">
-                        <div class="contact-column">
-                            <p><strong>E-mail:</strong> kontakt@dlaniej.poznan.pl</p>
-                            <p><strong>Telefon:</strong> +48 123 456 789</p>
-                            <p>Wizyty można umawiać telefonicznie lub poprzez portal ZnanyLekarz.</p>
+                <div class="info-card featured-card doctor-contact-card">
+                    <div>
+                        <h3>Kontakt</h3>
+                        <div class="contact-item" style="margin-bottom: 1rem;">
+                            <strong>E-mail:</strong>
+                            <span>kontakt@dlaniej.poznan.pl</span>
                         </div>
-
-                        <div class="hours-column">
-                            <ul class="hours-list">
-                                <li><span>Poniedziałek:</span> <span>09:00 - 15:00</span></li>
-                                <li><span>Wtorek:</span> <span>12:00 - 18:00</span></li>
-                                <li><span>Środa:</span> <span>09:00 - 15:00</span></li>
-                                <li><span>Czwartek:</span> <span>12:00 - 18:00</span></li>
-                                <li><span>Piątek:</span> <span>09:00 - 14:00</span></li>
-                            </ul>
+                        <div class="contact-item">
+                            <strong>Telefon:</strong>
+                            <span>+48 123 456 789</span>
                         </div>
+                        <p style="margin-top: 1rem; font-size: 0.9rem;">Wizyty można umawiać telefonicznie lub poprzez portal ZnanyLekarz.</p>
+                    </div>
+
+                    <div>
+                        <h3>Godziny przyjęć</h3>
+                        <ul class="opening-hours-list">
+                            <li><span>Poniedziałek:</span> <span>09:00 - 15:00</span></li>
+                            <li><span>Wtorek:</span> <span>12:00 - 18:00</span></li>
+                            <li><span>Środa:</span> <span>09:00 - 15:00</span></li>
+                            <li><span>Czwartek:</span> <span>12:00 - 18:00</span></li>
+                            <li><span>Piątek:</span> <span>09:00 - 14:00</span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>

@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dla Niej - Specjalistyczny Gabinet Ginekologiczny Poznań</title>
+    <title>Ginekolog Poznań | Ginekologia estetyczna | Laseroterapia ginekologiczna - Dla Niej</title>
+    <meta name="description"
+        content="Gabinet ginekologiczno-położniczy w Poznaniu oferuje kompleksową diagnostykę i leczenie schorzeń kobiecych, prowadzenie ciąży oraz nowoczesne zabiegi ginekologii estetycznej i regeneracyjnej.">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,13 +14,20 @@
     <header>
         <img src="materialy/DlaNiej- nowe kolory.png" alt="Logo" class="logo" width="100" height="100">
 
-        <nav>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Otwórz menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="nav-menu">
             <a href="index.html"><button>Home</button></a>
             <a href="lekarze.html"><button>Lekarze</button></a>
             <a href="Zabiegi.html"><button>Zabiegi</button></a>
             <a href="kontakt.html"><button>Kontakt</button></a>
         </nav>
     </header>
+    <script src="script.js"></script>
     <main>
         <div id="eyecatcher" class="content">
 
@@ -27,15 +36,24 @@
             <h1>Dla Niej</h1>
 
         </div>
-        <div id="about" class="content">
-            <h2>O nas</h2>
-            <p>Dla Niej to miejsce, gdzie najnowsze osiągnięcia medycyny spotykają się z
-                indywidualnym podejściem do pacjentki. Specjalizujemy się w kompleksowej
-                opiece ginekologicznej i położniczej, łącząc rzetelną wiedzę medyczną z
-                najnowszymi możliwościami medycyny estetycznej. Nasz gabinet oferuje
-                szeroki wachlarz usług od rutynowych badań i konsultacji, przez prowadzenia
-                ciąży, po leczenie ciężkich schorzeń układu rozrodczego i zaawansowane
-                zabiegi ginekologii estetycznej. </p>
+        <div id="about" class="page-container">
+            <h2 class="section-title">Nowoczesna opieka ginekologiczna</h2>
+            <p class="section-subtitle">Łączymy doświadczenie medyczne, nowoczesną diagnostykę oraz indywidualne podejście do każdej pacjentki.</p>
+
+            <div class="column-grid">
+                <div class="info-card">
+                    <h3>Nasza misja</h3>
+                    <p>Nasz gabinet oferuje kompleksową opiekę ginekologiczną, położniczą oraz nowoczesne zabiegi z zakresu ginekologii estetycznej i regeneracyjnej.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Kompleksowa opieka</h3>
+                    <p>Zapewniamy opiekę kobietom na każdym etapie życia — od profilaktyki i diagnostyki, przez prowadzenie ciąży, aż po nowoczesne terapie poprawiające komfort życia intymnego.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Najwyższe standardy</h3>
+                    <p>Pracujemy w oparciu o aktualną wiedzę medyczną, nowoczesny sprzęt diagnostyczny oraz najwyższe standardy bezpieczeństwa i dyskrecji.</p>
+                </div>
+            </div>
         </div>
     </main>
     <footer>

@@ -1,115 +1,49 @@
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 10rem);
-    /* Adjusted for header and footer */
-}
-
-.carousel {
-    position: relative;
-    width: 60vw;
-    overflow: hidden;
-    border-radius: 2rem;
-    text-align: center;
-    background-color: var(--color-surface);
-    box-shadow: 0 15px 45px rgba(181, 51, 36, 0.10);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.carousel:hover {
-
-    box-shadow: 0 25px 60px rgba(181, 51, 36, 0.14);
-}
-
-.carousel-inner {
-    display: flex;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.carousel-item {
-    min-width: 100%;
-    text-align: center;
-    padding-bottom: 2rem;
-}
-
-.carousel-placeholder {
-    height: 60vh;
+.doctor-image-placeholder {
     width: 100%;
+    aspect-ratio: 4 / 5;
     background-color: var(--color-neutral-1);
-    border: 2px solid var(--color-main-1);
-    border-bottom: 2px solid var(--color-side);
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    transition: transform 0.5s ease;
+    overflow: hidden;
+    border: 1px solid rgba(181, 51, 36, 0.05);
 }
 
-
-
-.carousel-item h2 {
-    margin: 10px 0;
+.info-card h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
 }
 
-.btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
+.info-card p {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    flex-grow: 1;
 }
 
 .appointment-button {
-    display: inline-block;
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 0.8rem 2rem;
-    background-color: var(--color-main-2);
-    color: white;
-    text-decoration: none;
-    border-radius: 2rem;
-    transition: all 0.3s ease;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
     border: none;
-    box-shadow: 0 4px 10px rgba(248, 187, 208, 0.3);
+    background: var(--color-main-1);
+    color: white;
+    font-family: var(--font-claims);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .appointment-button:hover {
-    background-color: var(--color-main-1);
+    background: var(--color-main-2);
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(248, 187, 208, 0.4);
-    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(181, 51, 36, 0.2);
 }
 
 @media (max-width: 768px) {
-    .carousel {
-        width: 90vw;
-    }
-
-    .carousel-placeholder {
-        width: 90vw;
-        height: 50vh;
-    }
-
-    .btn {
-        padding: 8px;
-        font-size: 16px;
-    }
-
-    .appointment-button {
-        font-size: 16px;
-        padding: 6px 12px;
+    .doctor-image-placeholder {
+        aspect-ratio: 1 / 1;
     }
 }

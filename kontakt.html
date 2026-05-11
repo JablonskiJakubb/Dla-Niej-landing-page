@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - Gabinet Ginekologiczny</title>
+    <title>Kontakt i Rezerwacja | Ginekolog Poznań - Dla Niej</title>
+    <meta name="description" content="Skontaktuj się z naszym gabinetem w Poznaniu. Umów wizytę ginekologiczną, położniczą lub zabieg ginekologii estetycznej. Sprawdź godziny otwarcia i dojazd.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="kontakt.css">
 </head>
@@ -13,88 +14,79 @@
     <header>
         <img src="materialy/DlaNiej- nowe kolory.png" alt="Logo" class="logo" width="100" height="100">
 
-        <nav>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Otwórz menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="nav-menu">
             <a href="index.html"><button>Home</button></a>
             <a href="lekarze.html"><button>Lekarze</button></a>
             <a href="Zabiegi.html"><button>Zabiegi</button></a>
             <a href="kontakt.html"><button>Kontakt</button></a>
         </nav>
     </header>
+    <script src="script.js"></script>
     <main>
-        <div class="contact-container">
-            <div class="creative-section">
-                <div class="creative-card">
-                    <h2>JAK SIĘ PRZYGOTOWAĆ DO WIZYTY GINEKOLOGICZNEJ?</h2>
-                    <p>Wizyta u ginekologa to ważny element dbania o zdrowie kobiece, jednak dla wielu kobiet wiąże się
-                        z
-                        stresem i obawami.
-                        Jak się do niej przygotować, aby wizyta przebiegała w komfortowej atmosferze?</p>
+        <div class="page-container">
+            <h1 class="section-title">Kontakt i Rezerwacja</h1>
+            <p class="section-subtitle">Zapraszamy do kontaktu telefonicznego lub mailowego. Chętnie odpowiemy na wszystkie pytania i umówimy dogodny termin wizyty.</p>
 
-                    <div class="icon-text">
-                        <div class="icon-circle">1</div>
-                        <p>Sprawdź datę ostatniej miesiączki</p>
-                    </div>
-                    <div class="icon-text">
-                        <div class="icon-circle">2</div>
-                        <p> Przygotuj dokumentację z wcześniejszych badań diagnostycznych i
-                            leczenia</p>
-                    </div>
-                    <div class="icon-text">
-                        <div class="icon-circle">3</div>
-                        <p>Higiena- zadbaj o higienę intymną, ale powstrzymaj się od zbyt intensywnych zabiegów
-                            higienizacyjnych.</p>
-                    </div>
+            <div class="column-grid">
+                <div class="info-card">
+                    <h3>Jak się przygotować do wizyty?</h3>
+                    <p>Wizyta u ginekologa to ważny element dbania o zdrowie kobiece. Jak się do niej przygotować, aby przebiegała w komfortowej atmosferze?</p>
 
+                    <ul class="card-list">
+                        <li><strong>Data miesiączki:</strong> Sprawdź datę ostatniej miesiączki</li>
+                        <li><strong>Dokumentacja:</strong> Przygotuj wyniki wcześniejszych badań i historię leczenia</li>
+                        <li><strong>Higiena:</strong> Zadbaj o higienę intymną, unikając jednak zbyt intensywnych zabiegów tuż przed wizytą</li>
+                    </ul>
                 </div>
 
-                <div class="creative-card desc">
-                    <h2>DLACZEGO AKURAT MY?</h2>
-                    <ul>
-                        <li>Empatyczne i indywidualne podejście do pacjentek.</li>
-                        <li>Najnowocześniejsze metody lecznicze i doświadczona, wykwalifikowana kadra medyczna.</li>
-                        <li>Krótki czas oczekiwania na wizytę.</li>
+                <div class="info-card">
+                    <h3>Dlaczego akurat my?</h3>
+                    <p>Stawiamy na najwyższe standardy opieki medycznej oraz pełne zrozumienie potrzeb naszych pacjentek.</p>
+                    <ul class="card-list">
+                        <li>Empatyczne i indywidualne podejście do każdej pacjentki</li>
+                        <li>Najnowocześniejsze metody lecznicze i wykwalifikowana kadra</li>
+                        <li>Krótki czas oczekiwania na wizytę w komfortowych warunkach</li>
+                        <li>Nowoczesny sprzęt diagnostyczny najwyższej klasy</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="contact-info">
-                <div class="info-section">
+            <div class="contact-grid">
+                <div class="info-card contact-details-card">
                     <h3>Dane Kontaktowe</h3>
-                    <p><strong>Adres:</strong> ul. Grunwaldzka 31c, 60-783 Poznań</p>
-                    <p><strong>Telefon:</strong> +48 123 456 789</p>
-                    <p><strong>E-mail:</strong> kontakt@dlaniej.poznan.pl</p>
-                </div>
+                    <div class="contact-item">
+                        <strong>Adres:</strong>
+                        <span>ul. Grunwaldzka 31c, 60-783 Poznań</span>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Telefon:</strong>
+                        <span>+48 123 456 789</span>
+                    </div>
+                    <div class="contact-item">
+                        <strong>E-mail:</strong>
+                        <span>kontakt@dlaniej.poznan.pl</span>
+                    </div>
 
-                <div class="info-section">
-                    <h3>Godziny Otwarcia</h3>
-                    <ul class="opening-hours">
-                        <li>
-                            <span>
-                                <span class="full-day">Poniedziałek - Piątek</span>
-                                <span class="short-day">Pon - Pt</span>:
-                            </span>
-                            <span>09:00 - 19:00</span>
-                        </li>
-                        <li>
-                            <span>
-                                <span class="full-day">Sobota</span>
-                                <span class="short-day">Sob</span>:
-                            </span>
-                            <span>09:00 - 14:00</span>
-                        </li>
-                        <li>
-                            <span>
-                                <span class="full-day">Niedziela</span>
-                                <span class="short-day">Niedz</span>:
-                            </span>
-                            <span>Zamknięte</span>
-                        </li>
+                    <h3 style="margin-top: 2rem;">Godziny Otwarcia</h3>
+                    <ul class="opening-hours-list">
+                        <li><span>Poniedziałek - Piątek:</span> <span>09:00 - 19:00</span></li>
+                        <li><span>Sobota:</span> <span>09:00 - 14:00</span></li>
+                        <li><span>Niedziela:</span> <span>Zamknięte</span></li>
                     </ul>
                 </div>
-                <iframe class="map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.132561510294!2d16.892225577203845!3d52.404273672031024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444ce3595a99d%3A0xab818b6193c996a9!2sGrunwaldzka%2031C%2C%2060-783%20Pozna%C5%84!5e0!3m2!1spl!2spl!4v1778138761450!5m2!1spl!2spl"
-                    style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div class="info-card map-card">
+                    <iframe class="map-frame"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.132561510294!2d16.892225577203845!3d52.404273672031024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444ce3595a99d%3A0xab818b6193c996a9!2sGrunwaldzka%2031C%2C%2060-783%20Pozna%C5%84!5e0!3m2!1spl!2spl!4v1778138761450!5m2!1spl!2spl"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </main>
